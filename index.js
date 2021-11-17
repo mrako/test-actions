@@ -7,6 +7,9 @@ try {
 
   console.log(`env token: ${token}`);
 
+  console.log(`head ref: ${process.env.HEAD_REF}`);
+  console.log(`base ref: ${process.env.BASE_REF}`);
+
   core.setOutput('modified-token', `token received: ${token}`);
 } catch (e) {
   core.setFailed(error.message);

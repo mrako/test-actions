@@ -12,6 +12,8 @@ jobs:
         run: node index.js
         env:
           INPUT_TOKEN: 'node test input_token'
+          HEAD_REF: ${{ github.head_ref }}
+          BASE_REF: ${{ github.base_ref }}
       - name: print token with node
         uses: ./
         with:
