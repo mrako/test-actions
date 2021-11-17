@@ -6,6 +6,7 @@ jobs:
   echo:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
       - run: npm ci
       - name: default run
         run: node index.js
