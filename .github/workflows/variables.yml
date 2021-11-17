@@ -1,8 +1,6 @@
 name: Print variables
 
-on:
-  issue_comment:
-    types: [created]
+on: [push, pull_request]
 
 jobs:
   echo:
