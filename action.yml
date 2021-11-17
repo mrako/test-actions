@@ -1,0 +1,12 @@
+name: 'Test action'
+description: ''
+inputs:
+  token:
+    description: Example token. Usually GITHUB_TOKEN.
+    required: true
+outputs:
+  modified-token:
+    description: Modified token
+runs:
+  using: 'node12'
+  main: 'dist/index.js'

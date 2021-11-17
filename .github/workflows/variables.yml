@@ -6,8 +6,12 @@ jobs:
   echo:
     runs-on: ubuntu-latest
     steps:
-      - name: print token with node
+      - name: default run
         run: node index.js
+        env:
+          token: 'node test token'
+      - name: print token with node
+        uses: .
         with:
           token: 'node test token'
       - name: print token with echo

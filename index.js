@@ -1,5 +1,13 @@
 const core = require('@actions/core');
 
-console.log(`core token: ${core.getInput('token')}`);
+const token = process.env.INPUT_TOKEN || 'default';
 
-console.log(`env token: ${process.env.INPUT_TOKEN}`);
+try {
+  console.log(`core token: ${core.getInput('token')}`);
+
+  console.log(`env token: ${token}`);
+
+  core.setOutput('modified-token', `token received: ${token}`);
+} catch (e) {
+  core.setFailed(error.message);
+}
