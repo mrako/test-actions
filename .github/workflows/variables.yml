@@ -11,7 +11,7 @@ jobs:
         env:
           token: 'node test token'
       - name: print token with node
-        uses: .
+        uses: ./
         with:
           token: 'node test token'
       - name: print token with echo
