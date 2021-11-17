@@ -7,8 +7,8 @@ try {
 
   console.log(`env token: ${token}`);
 
-  console.log(`head ref: ${process.env.HEAD_REF}`);
-  console.log(`base ref: ${process.env.BASE_REF}`);
+  console.log(`head ref: ${process.env.GITHUB_HEAD_REF}`);
+  console.log(`base ref: ${process.env.GITHUB_BASE_REF}`);
 
   core.setOutput('modified-token', `token received: ${token}`);
 } catch (e) {
