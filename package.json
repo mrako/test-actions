@@ -1,5 +1,11 @@
 {
+  "scripts": {
+    "build": "./node_modules/.bin/ncc build index.js --license licenses.txt"
+  },
   "dependencies": {
     "@actions/core": "^1.6.0"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.32.0"
   }
 }
