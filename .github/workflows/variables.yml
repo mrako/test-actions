@@ -1,0 +1,19 @@
+name: Print variables
+
+on:
+  issue_comment:
+    types: [created]
+
+jobs:
+  echo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: print token with node
+        run: node index.js
+        with:
+          token: 'node test token'
+      - name: print token with echo
+        run: |
+          echo ${{ INPUT_TOKEN }}
+        with:
+          token: 'shell test token'
