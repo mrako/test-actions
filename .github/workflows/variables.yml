@@ -16,6 +16,6 @@ jobs:
           token: 'node test token'
       - name: print token with echo
         run: |
-          echo $INPUT_TOKEN
-        with:
-          token: 'shell test token'
+          echo $TOKEN
+        env:
+          TOKEN: 'shell test token'
